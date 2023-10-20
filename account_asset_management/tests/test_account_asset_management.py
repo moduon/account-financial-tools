@@ -733,7 +733,7 @@ class TestAssetManagement(SavepointCase):
             asset_line.create_move()
         self.assertEqual(asset.value_residual, 0.10)
         asset.compute_depreciation_board()
-        lines = asset.depreciation_line_ids.filtered(lambda x: not x.init_entry)
+        lines = asset.depreciation_line_ids.filtered(lambda x: not x.init_entry).sorted("id")
         self.assertEqual(len(lines), 11)
         last_line = lines[-1]
         self.assertEqual(last_line.amount, 0.10)

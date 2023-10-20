@@ -610,6 +610,11 @@ class AccountAsset(models.Model):
                         else:
                             depr_max = asset.depreciation_base
                         amount = depr_max - depreciated_value
+                        if amount < 0 and not asset.depreciation_line_ids[-1].move_check:
+                            asset.depreciation_line_ids[-1].update({
+                                'amount': asset.depreciation_line_ids[-1].amount + amount,
+                            })
+                            amount = 0
                     else:
                         amount = line['amount']
                     if amount:
