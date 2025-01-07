@@ -35,9 +35,9 @@ Invoicing > Configuration > Accounting > Fiscal Years
 .. figure:: https://raw.githubusercontent.com/OCA/account-financial-tools/17.0/account_fiscal_year/static/description/account_fiscal_year_form.png
 
 The start and end dates of the current fiscal years are then available
-in the company tree and form views.
+in the company list and form views.
 
-.. figure:: https://raw.githubusercontent.com/OCA/account-financial-tools/17.0/account_fiscal_year/static/description/res_company_tree.png
+.. figure:: https://raw.githubusercontent.com/OCA/account-financial-tools/17.0/account_fiscal_year/static/description/res_company_list.png
 
 **Table of contents**
 
